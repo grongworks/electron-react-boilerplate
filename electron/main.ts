@@ -59,6 +59,6 @@ app.on('activate', () => {
 });
 
 ipcMain.on('hello', (event, args) => {
-  event.returnValue = "Testddy"
-  console.log("MSG FROM CLIENT: ", args)
+  console.log("RECEIVED MESSAGE FROM CLIENT:", args)
+  event.returnValue = "Hallo Client!"
 })

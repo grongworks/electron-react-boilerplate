@@ -8,7 +8,7 @@ import { contextBridge, ipcRenderer } from "electron"
 process.once("loaded", () => {
   contextBridge.exposeInMainWorld("electronApi", {
     sayHiToServer: () => {
-      return ipcRenderer.sendSync('hello', 'Hallo Server was geht? FROM CONTEXT BRIDGE')
+      return ipcRenderer.sendSync('hello', 'Hallo Server!')
     }
   });
 });
